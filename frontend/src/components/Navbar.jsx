@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -26,15 +27,25 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-12">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="text-gray-500 hover:text-white transition-colors duration-300 text-sm font-light tracking-wide"
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {menuItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`relative text-sm font-light tracking-wide transition-colors duration-300 group ${
+                      isActive ? 'text-white' : 'text-gray-500 hover:text-white'
+                    }`}
+                  >
+                    {item.name}
+                    <span 
+                      className={`absolute left-0 bottom-[-4px] h-[1px] bg-white transition-all duration-300 ${
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -68,16 +79,21 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-black border-t border-gray-900">
           <div className="px-6 py-6 space-y-4">
-            {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="block text-gray-500 hover:text-white transition-colors duration-300 text-lg font-light"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {menuItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`block text-lg font-light transition-colors duration-300 ${
+                    isActive ? 'text-white font-normal' : 'text-gray-500 hover:text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
         </div>
       )}
