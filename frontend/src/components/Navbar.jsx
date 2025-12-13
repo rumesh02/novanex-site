@@ -1,9 +1,16 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems = ['Home', 'Services', 'Projects', 'About', 'Contact'];
+  const menuItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ];
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-black border-b border-gray-900">
@@ -11,22 +18,22 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-xl font-bold text-white tracking-tight">
+            <Link to="/" className="text-xl font-bold text-white tracking-tight">
               NOVANEX
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-12">
               {menuItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                <Link
+                  key={item.name}
+                  to={item.path}
                   className="text-gray-500 hover:text-white transition-colors duration-300 text-sm font-light tracking-wide"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               ))}
             </div>
           </div>
@@ -62,14 +69,14 @@ const Navbar = () => {
         <div className="md:hidden bg-black border-t border-gray-900">
           <div className="px-6 py-6 space-y-4">
             {menuItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+              <Link
+                key={item.name}
+                to={item.path}
                 className="block text-gray-500 hover:text-white transition-colors duration-300 text-lg font-light"
                 onClick={() => setIsOpen(false)}
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </div>
         </div>
