@@ -23,11 +23,20 @@ const Hero = () => {
         .glow-line-1 {
           animation: drawLine 7s ease-in-out 1s infinite,
                      fadeInOut 7s ease-in-out 1s infinite;
+          will-change: stroke-dashoffset, opacity;
         }
 
         .glow-line-2 {
           animation: drawLine 8.5s ease-in-out 4.2s infinite,
                      fadeInOut 8.5s ease-in-out 4.2s infinite;
+          will-change: stroke-dashoffset, opacity;
+        }
+        
+        /* Mobile-optimized blur using drop-shadow instead of SVG filter */
+        @media (max-width: 768px) {
+          .glow-line-1, .glow-line-2 {
+            filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));
+          }
         }
       `}</style>
 
@@ -75,9 +84,8 @@ const Hero = () => {
             </linearGradient>
 
             <filter id="glow-filter">
-              <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+              <feGaussianBlur stdDeviation="4" result="coloredBlur" />
               <feMerge>
-                <feMergeNode in="coloredBlur" />
                 <feMergeNode in="coloredBlur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
@@ -91,8 +99,8 @@ const Hero = () => {
             strokeLinecap="round"
             strokeDasharray="2200"
             strokeDashoffset="2200"
-            className="glow-line-1"
-            filter="url(#glow-filter)"
+            className="glow-line-1 hidden md:block md:[filter:url(#glow-filter)]"
+            vectorEffect="non-scaling-stroke"
           />
 
           <path
@@ -102,8 +110,31 @@ const Hero = () => {
             strokeLinecap="round"
             strokeDasharray="2200"
             strokeDashoffset="2200"
-            className="glow-line-2"
-            filter="url(#glow-filter)"
+            className="glow-line-2 hidden md:block md:[filter:url(#glow-filter)]"
+            vectorEffect="non-scaling-stroke"
+          />
+          
+          {/* Mobile-optimized versions without SVG filter */}
+          <path
+            d="M-200 200 C 200 280, 600 350, 1000 420 C 1300 480, 1500 540, 1640 600"
+            stroke="url(#glow1)"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeDasharray="2200"
+            strokeDashoffset="2200"
+            className="glow-line-1 md:hidden"
+            vectorEffect="non-scaling-stroke"
+          />
+
+          <path
+            d="M-200 700 C 200 620, 600 550, 1000 480 C 1300 420, 1500 360, 1640 300"
+            stroke="url(#glow2)"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeDasharray="2200"
+            strokeDashoffset="2200"
+            className="glow-line-2 md:hidden"
+            vectorEffect="non-scaling-stroke"
           />
         </svg>
       </div>
