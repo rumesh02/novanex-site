@@ -26,7 +26,7 @@ function HowWeWork() {
     <section id="process" className="py-24 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-sm uppercase tracking-widest text-purple-500 mb-20">
+        <h2 className="text-sm uppercase tracking-widest text-purple-400 mb-20">
           How We Work
         </h2>
 
@@ -35,7 +35,7 @@ function HowWeWork() {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               {/* Step Number */}
-              <div className="text-7xl font-bold text-purple-500 mb-6 leading-none">
+              <div className="text-7xl font-bold text-purple-400 mb-6 leading-none">
                 {step.number}
               </div>
 

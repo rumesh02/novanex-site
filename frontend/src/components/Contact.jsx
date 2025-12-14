@@ -150,7 +150,7 @@ function Contact() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white font-semibold text-lg rounded-lg transition-colors duration-200"
+            className="w-full px-8 py-3 bg-purple-700 hover:bg-purple-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white font-semibold text-lg rounded-lg transition-colors duration-200"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
@@ -160,7 +160,7 @@ function Contact() {
         <div className="mt-12 pt-12 border-t border-gray-800 text-center">
           <p className="text-gray-400 text-sm">
             Or email us directly at{' '}
-            <a href="mailto:hello@novanex.com" className="text-purple-600 hover:text-purple-500 transition-colors">
+            <a href="mailto:hello@novanex.com" className="text-purple-400 hover:text-purple-500 transition-colors">
               hello@novanex.com
             </a>
           </p>

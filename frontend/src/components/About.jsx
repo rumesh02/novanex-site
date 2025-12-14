@@ -3,7 +3,7 @@ function About() {
     <section id="about" className="py-24 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-sm uppercase tracking-widest text-purple-500 mb-16">
+        <h2 className="text-sm uppercase tracking-widest text-purple-400 mb-16">
           Why Novanex
         </h2>
 
