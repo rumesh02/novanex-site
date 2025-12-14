@@ -12,14 +12,18 @@ function Footer() {
           {/* Right Side - Social Links */}
           <div className="flex gap-6">
             <a
-              href="#"
+              href="https://www.instagram.com/novanex_digital/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-500 hover:text-purple-500 transition-colors duration-200 text-sm"
-              aria-label="GitHub"
+              aria-label="Instagram"
             >
-              GitHub
+              Instagram
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/novanex-it/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-500 hover:text-purple-500 transition-colors duration-200 text-sm"
               aria-label="LinkedIn"
             >
