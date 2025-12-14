@@ -11,11 +11,11 @@ function ServicesPage() {
       id: 1,
       number: '01',
       title: 'Web Development',
-      description: 'Build stunning, high-performance web applications with modern frameworks and cutting-edge technologies. From responsive designs to complex web platforms.',
+      description: 'From "it works on my machine" to production-ready web apps. We build sites and platforms that don\'t just look good—they actually perform.',
       icon: Globe,
       color: 'from-purple-600 to-purple-400',
       details: {
-        overview: 'Transform your digital presence with cutting-edge web solutions that combine aesthetics with functionality. Our web development services focus on creating fast, responsive, and scalable applications that deliver exceptional user experiences across all devices.',
+        overview: 'We\'ve built everything from simple landing pages to complex web platforms. The secret? We actually test on real devices, optimize for real users, and write code that other developers won\'t hate. Whether you need a blazing-fast React app or a full-stack platform, we\'ve got you covered.',
         technologies: [
           'React, Vue, Angular - Modern JavaScript frameworks',
           'Next.js, Nuxt.js - Server-side rendering & static generation',
@@ -50,11 +50,11 @@ function ServicesPage() {
       id: 2,
       number: '02',
       title: 'Mobile Applications',
-      description: 'Native and cross-platform mobile apps that deliver exceptional user experiences. iOS and Android solutions tailored to your business needs.',
+      description: 'Apps that people actually use. Not the kind that get installed once and forgotten. We build mobile experiences that solve real problems.',
       icon: Smartphone,
       color: 'from-purple-600 to-purple-400',
       details: {
-        overview: 'Reach your audience wherever they are with powerful mobile applications. We create intuitive, feature-rich apps that users love, whether native iOS and Android or cross-platform solutions that work seamlessly across devices.',
+        overview: 'Building mobile apps is easy. Building mobile apps that don\'t drain your battery, crash randomly, or feel clunky? That\'s where we come in. We obsess over the details—smooth animations, intuitive gestures, offline support—because we\'re the generation that lives on our phones.',
         technologies: [
           'React Native - Cross-platform development',
           'Flutter - Google\'s UI toolkit',
@@ -90,11 +90,11 @@ function ServicesPage() {
       id: 3,
       number: '03',
       title: 'Custom Software Solutions',
-      description: 'Bespoke software engineered to solve your unique challenges. Scalable, secure, and designed to grow with your business.',
+      description: 'That weird, specific thing you need that doesn\'t exist yet? We\'ll build it. Custom software that actually fits your workflow instead of forcing you to adapt.',
       icon: Code2,
       color: 'from-purple-600 to-purple-400',
       details: {
-        overview: 'Every business has unique challenges that require tailored solutions. Our custom software development service delivers enterprise-grade applications designed specifically for your workflows, processes, and goals. From CRM systems to inventory management, we build software that fits like a glove.',
+        overview: 'Off-the-shelf software never quite fits, does it? We build custom solutions that match exactly how you work. No bloated features you\'ll never use, no "workarounds" you have to remember. Just software that makes sense for your specific needs. And yes, we document it properly so you\'re not stuck with us forever (though we hope you\'ll stick around).',
         technologies: [
           'Python, Java, C# - Enterprise languages',
           'Django, Spring Boot, .NET - Robust frameworks',
@@ -131,11 +131,11 @@ function ServicesPage() {
       id: 4,
       number: '04',
       title: 'IoT & Smart Systems',
-      description: 'Connect the physical and digital worlds with intelligent IoT solutions. From smart devices to industrial automation systems.',
+      description: 'Making things smart that probably didn\'t need to be smart, but are way cooler now. Sensors, devices, automation—the future is connected.',
       icon: Cpu,
       color: 'from-purple-600 to-purple-400',
       details: {
-        overview: 'Bridge the gap between physical devices and digital intelligence. Our IoT solutions help you collect, analyze, and act on real-time data from connected devices. Whether it\'s smart home automation, industrial monitoring, or fleet management, we create systems that make your world smarter.',
+        overview: 'IoT is where hardware meets software, and honestly? It\'s one of the most fun challenges in tech. We\'ve worked with everything from Arduino to industrial sensors. Whether you want to monitor something, automate something, or just make something respond to the internet, we\'re here for it. Fair warning: we might get way too excited about your project.',
         technologies: [
           'MQTT, CoAP - IoT protocols',
           'Arduino, Raspberry Pi - Hardware platforms',
@@ -182,32 +182,43 @@ function ServicesPage() {
       <div className="pt-32 pb-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
+              <Code2 className="w-4 h-4 text-purple-400" />
+              <span className="text-purple-400 text-sm font-semibold">What We Actually Do</span>
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Services That Drive
-              <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"> Innovation</span>
+              We Build
+              <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"> Stuff That Works</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl">
-              From concept to deployment, we deliver comprehensive software solutions that transform businesses and create lasting impact.
+            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mb-4">
+              No corporate fluff. No buzzword bingo. Just solid software solutions built by students who actually know what they're doing.
+            </p>
+            <p className="text-lg text-gray-500 max-w-3xl">
+              (Yes, we can do the corporate talk too. But wouldn't you rather work with people who keep it real?)
             </p>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800">
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">50+</div>
-              <div className="text-gray-400">Projects Delivered</div>
+            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all">
+              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">4</div>
+              <div className="text-gray-400">Core Services</div>
+              <div className="text-xs text-gray-600 mt-1">Master a few, not mediocre at many</div>
             </div>
-            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800">
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">98%</div>
-              <div className="text-gray-400">Client Satisfaction</div>
+            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all">
+              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">100%</div>
+              <div className="text-gray-400">Student Powered</div>
+              <div className="text-xs text-gray-600 mt-1">Fresh perspectives, zero legacy</div>
             </div>
-            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800">
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">24/7</div>
-              <div className="text-gray-400">Support Available</div>
+            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all">
+              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">∞</div>
+              <div className="text-gray-400">Learning Curve</div>
+              <div className="text-xs text-gray-600 mt-1">We learn whatever it takes</div>
             </div>
-            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800">
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">5+</div>
-              <div className="text-gray-400">Years Experience</div>
+            <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all">
+              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-2">0</div>
+              <div className="text-gray-400">Corporate BS</div>
+              <div className="text-xs text-gray-600 mt-1">We say what we mean</div>
             </div>
           </div>
         </div>
@@ -329,20 +340,26 @@ function ServicesPage() {
           </div>
 
           {/* Bottom CTA Section */}
-          <div className="mt-20 p-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our services can help you achieve your goals. Get in touch for a free consultation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors">
-                Schedule a Call
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-colors">
-                View Our Work
-              </button>
+          <div className="mt-20 p-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAgMi4yMS0xLjc5IDQtNCA0cy00LTEuNzktNC00IDEuNzktNCA0LTQgNCAxLjc5IDQgNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
+            <div className="relative">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Not Sure Which Service You Need?
+              </h2>
+              <p className="text-xl text-purple-100 mb-4 max-w-2xl mx-auto">
+                Honestly, half our projects start as "we need X" and end up being "oh, what we actually needed was Y."
+              </p>
+              <p className="text-lg text-purple-200 mb-8 max-w-2xl mx-auto">
+                Let's figure it out together. No sales pitch, just real talk about what would actually work for you.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors">
+                  Let's Chat
+                </button>
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-colors">
+                  See Our Work
+                </button>
+              </div>
             </div>
           </div>
         </div>
