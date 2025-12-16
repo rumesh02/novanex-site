@@ -44,7 +44,7 @@ function AboutPage() {
                 <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"> Agency</span>
               </h1>
               <p className="text-xl text-gray-400 leading-relaxed mb-6">
-                Novanex started in a university dorm room with three students, too many energy drinks, and one ambitious idea: 
+                Novanex started in a university dorm room with some students, too many energy drinks, and one ambitious idea: 
                 <span className="text-white font-semibold"> what if we could build software that actually matters?</span>
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
