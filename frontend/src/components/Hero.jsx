@@ -175,7 +175,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="#projects"
+            href="/projects"
             className="inline-flex items-center gap-3 text-gray-500 hover:text-white transition-colors text-lg"
           >
             <span className="font-light">View work</span>
