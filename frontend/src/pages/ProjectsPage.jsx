@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { ExternalLink, Github, Calendar, Tag } from 'lucide-react'
@@ -11,101 +12,96 @@ function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Online Flower Marketplace',
       category: 'Web Development',
-      description: 'Started as "just a simple store" and evolved into a full platform. Real-time inventory, payment processing, analytics—the works. Learned a lot about scale on this one.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
-      date: 'November 2025',
+      description: 'Started as "just a simple flower store" and evolved into a full platform. Real-time inventory, payment processing, analytics—the works. Learned a lot about scale on this one.',
+      image: '/images/dinujayaFlora.png',
+      technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
+      date: 'June 2025',
       link: '#',
       github: '#',
       highlights: [
         'Real-time inventory tracking',
-        'Multi-vendor support',
         'Advanced analytics dashboard',
         'Payment gateway integration'
       ]
     },
     {
       id: 2,
-      title: 'Fitness Tracking App',
+      title: 'Wellness Tracking App',
       category: 'Mobile Apps',
-      description: 'Built this while trying to get in shape ourselves (ironic, right?). Tracks workouts, nutrition, integrates with wearables. Actually use it daily.',
-      image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80',
-      technologies: ['React Native', 'Firebase', 'Redux', 'HealthKit'],
-      date: 'October 2025',
+      description: 'Built this while trying to get in shape ourselves (ironic, right?). Tracks well-being, nutrition and sleep habits. Actually use it daily.',
+      image: '/images/mindEase.png',
+      technologies: ['React Native', 'Firebase', 'HealthKit'],
+      date: 'October 2024',
       link: '#',
       github: '#',
       highlights: [
-        'Workout tracking & planning',
+        'Well-being tracking & planning',
         'Nutrition calculator',
-        'Social sharing features',
-        'Wearable device integration'
+        'Records sleep patterns'
       ]
     },
     {
       id: 3,
-      title: 'Smart Home Automation',
-      category: 'IoT',
-      description: 'Started in a dorm room, now controls lights, AC, and security. Voice commands, energy monitoring, the whole smart home package. Our proudest IoT project.',
-      image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80',
-      technologies: ['Arduino', 'MQTT', 'React', 'AWS IoT', 'Alexa'],
+      title: 'Handbag Marketplace',
+      category: 'Web Development',
+      description: 'Online custom handbag marketplace implemented for a local designer. Users can customize designs and order directly. Built with scalability in mind from day one.',
+      image: '/images/ella.png',
+      technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker'],
       date: 'September 2025',
       link: '#',
       github: '#',
       highlights: [
-        'Voice assistant integration',
-        'Energy consumption monitoring',
-        'Automated schedules',
-        'Remote device control'
+        'Custom design tool',
+        'Real-time order tracking',
+        'User-friendly admin panel'
       ]
     },
     {
       id: 4,
-      title: 'CRM System',
+      title: 'Inventory Management System',
       category: 'Custom Software',
-      description: 'Client hated their bloated CRM. We built them a lean, mean, customer-tracking machine. Does exactly what they need, nothing they don\'t.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-      technologies: ['Vue.js', 'Django', 'PostgreSQL', 'Redis', 'Docker'],
+      description: 'Client hated their manual inventory management. We built them something more than Inventory Management System. Inventory + Sales CRM + Analytics Dashboard all in one.',
+      image: '/images/pasanEnterprises.png',
+      technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'PDF-Generator'],
       date: 'August 2025',
       link: '#',
       github: '#',
       highlights: [
-        'Lead management & tracking',
-        'Sales pipeline visualization',
-        'Team collaboration tools',
-        'Custom reporting & analytics'
+        'Inventory tracking & alerts',
+        'Sales CRM integration + Order management',
+        'Invoice & Quotation generation',
       ]
     },
     {
       id: 5,
-      title: 'Educational Learning Platform',
+      title: 'Farm to Market Platform',
       category: 'Web Development',
-      description: 'Online learning should be better. Built this with WebRTC for live classes, quizzes that actually help, and tracking that makes sense. Students actually like using it.',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
-      technologies: ['Next.js', 'WebRTC', 'MongoDB', 'Stripe', 'AWS S3'],
-      date: 'July 2025',
+      description: 'Built for a local agri-business to connect farmers and merchants directly. Real-time bidding, secure payments, logistics tracking. Ended up being way more complex than we thought, but that\'s how you learn.',
+      image: '/images/farmToMarket.png',
+      technologies: ['React', 'Node.js', 'MongoDB', 'PayHere', 'AWS S3', 'Socket.io', 'Google Maps API'],
+      date: 'February 2024',
       link: '#',
       github: '#',
       highlights: [
-        'Live video streaming',
-        'Interactive quizzes',
-        'Progress tracking',
-        'Certificate generation'
+        'Real-time bidding system',
+        'Secure payment processing',
+        'Logistics & delivery tracking',
       ]
     },
     {
       id: 6,
-      title: 'Restaurant Ordering App',
+      title: 'Restaurant booking App',
       category: 'Mobile Apps',
-      description: 'Local restaurant needed an app fast. Built in Flutter, deployed in weeks. Order food, book tables, earn rewards. Simple, fast, works.',
+      description: 'Local restaurant needed an app fast. Built in Flutter, deployed in weeks. Manage table reservations. Simple, fast, works.',
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
-      technologies: ['Flutter', 'Firebase', 'Stripe', 'Google Maps API'],
+      technologies: ['Flutter', 'Firebase', 'PayHere', 'Google Maps API'],
       date: 'June 2025',
       link: '#',
       github: '#',
       highlights: [
-        'Online ordering & delivery',
+        'Online table reservations',
         'Table reservation system',
         'Loyalty rewards program',
         'Real-time order tracking'
@@ -113,53 +109,34 @@ function ProjectsPage() {
     },
     {
       id: 7,
-      title: 'Industrial Monitoring System',
+      title: 'Supermarket Automation System',
       category: 'IoT',
-      description: 'Sensors → Data → Predictions → Fewer breakdowns. This project got us into machine learning. Now it predicts equipment failures before they happen. Pretty cool.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
-      technologies: ['Python', 'InfluxDB', 'Grafana', 'MQTT', 'Machine Learning'],
-      date: 'May 2025',
+      description: 'Sensors → Data → Predictions → Efficient Supermarket Operations. This project got us more into hardware. Enter what you need and in next minutes it\'s in your hand, sealed packed. Pretty cool right?',
+      image: '/images/hardwareProject.png',
+      technologies: ['Arduino', 'Nema', 'Load Cell', 'Temperature Sensor', 'LCD Display'],
+      date: 'May 2023',
       link: '#',
       github: '#',
       highlights: [
         'Real-time sensor monitoring',
-        'Predictive maintenance alerts',
-        'Historical data analysis',
-        'Custom dashboard & reports'
+        'Automated restocking alerts',
+        'Automated dispensing, packaging & sealing'
       ]
     },
     {
       id: 8,
-      title: 'Project Management Tool',
+      title: 'PharmaSys',
       category: 'Custom Software',
-      description: 'Built this because existing tools had too many features nobody used. Kanban boards, real-time updates, time tracking. Clean, focused, actually useful.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
-      technologies: ['React', 'Express', 'PostgreSQL', 'Socket.io', 'Redis'],
-      date: 'April 2025',
+      description: 'Built this for a local medicine disributor to manage inventory, suppliers and pharmacy orders. Integrated with invoices and reports generation. Turned out to be a great learning experience about the pharma supply chain.',
+      image: '/images/pharmaSys.png',
+      technologies: ['React', 'Node', 'MongoDB', 'AWS', 'PDF Generator'],
+      date: 'December 2024',
       link: '#',
       github: '#',
       highlights: [
-        'Kanban & Gantt views',
-        'Real-time collaboration',
-        'Resource management',
-        'Time tracking & reporting'
-      ]
-    },
-    {
-      id: 9,
-      title: 'Social Media Dashboard',
-      category: 'Web Development',
-      description: 'Manage multiple social accounts from one place. Schedule posts, track what\'s working, see competitor activity. Made for people who live in DMs.',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Twitter API', 'Instagram API'],
-      date: 'March 2025',
-      link: '#',
-      github: '#',
-      highlights: [
-        'Multi-platform management',
-        'Post scheduling',
-        'Engagement analytics',
-        'Competitor analysis'
+        'Inventory & supplier management',
+        'Pharmacy management',
+        'Invoice & report generation'
       ]
     }
   ]
@@ -233,20 +210,6 @@ function ProjectsPage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60"></div>
-                  <div className="absolute top-4 right-4 flex gap-2">
-                    <a
-                      href={project.link}
-                      className="p-2 bg-black/50 backdrop-blur-sm rounded-lg hover:bg-purple-600 transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5 text-white" />
-                    </a>
-                    <a
-                      href={project.github}
-                      className="p-2 bg-black/50 backdrop-blur-sm rounded-lg hover:bg-purple-600 transition-colors"
-                    >
-                      <Github className="w-5 h-5 text-white" />
-                    </a>
-                  </div>
                 </div>
 
                 {/* Project Content */}
@@ -316,12 +279,12 @@ function ProjectsPage() {
                 (Bonus points if your project teaches us something new)
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors">
+                <Link to="/contact" className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors text-center">
                   Let's Talk
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-colors">
+                </Link>
+                <Link to="/contact" className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-colors text-center">
                   See What We Can Do
-                </button>
+                </Link>
               </div>
             </div>
           </div>
