@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -174,12 +175,12 @@ const Hero = () => {
             </svg>
           </a>
 
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="inline-flex items-center gap-3 text-gray-500 hover:text-white transition-colors text-lg"
           >
             <span className="font-light">View work</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
