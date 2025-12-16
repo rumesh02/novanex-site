@@ -7,6 +7,7 @@ function Footer() {
           <div>
             <h3 className="text-2xl font-bold text-white mb-2">Novanex</h3>
             <p className="text-gray-500 text-sm">Building software that scales.</p>
+            <p className="text-gray-600 text-sm mt-1">Colombo, Sri Lanka</p>
           </div>
 
           {/* Right Side - Social Links */}
